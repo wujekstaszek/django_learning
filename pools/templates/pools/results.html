@@ -1,0 +1,8 @@
+<h1>{{question}}</h1>
+<ul>
+	{%for choice in question.choice_set.all%}
+	<li>{{choice}} - {{choice.votes}} votes</li>
+	{%endfor%}
+</ul>
+
+<h2> <a href="{%url 'pools:detail' question.id%}"> Vote again? </a></h2>
